@@ -1,2 +1,2 @@
 # PCA
-Atividade de Principal Component Analysis, trabalho de Álgebra Linear para fins acadêmicos
+Atividade de Principal Component Analysis para aula de Álgebra Linear
