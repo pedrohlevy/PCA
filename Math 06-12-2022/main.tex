@@ -10,14 +10,20 @@
 \begin{document}
 
 \maketitle
+\textbf{GitHub}
+\par
+https://github.com/pedrohlevy/PCA
 \section{Encontrando um Dataset...}
 \par
-Aqui vamos discorrer a respeito do que é nosso dataset, e como o acessamos.
+
+O 'dataset' utilizado foi extraído na página oficial do International Monetary Fund (IMF), do qual foram utilizados dados da porcentagem do PIB de certos países que utilizam o euro como moeda. \\
+Link: https://www.imf.org/en/Publications/WEO/weo-database/2022/October/
+
 \subsection{Importando o Dataset...}
-\par
 Importamos então a base de dados, que estava em Excel ao extrair:
 \begin{verbatim}
-    pb = pd.read_excel()
+    pb = pd.read_excel("/content/drive/MyDrive/Dataset/PIBEURO1casa.xlsx",index_col = 0,
+skipfooter = 4)
 \end{verbatim}
 \subsection{Tratando os dados...}
 \par
@@ -59,11 +65,32 @@ Por fim, plotamos o gráfico de linhas que representava as colunas dos dois maio
 plt.show()
 \end{verbatim}
 \hline
-\section{Gráfico}
+\section{Anexos}
+\begin{figure}[p]
+\centering
+\includegraphics{figs/newfigs/pb.jpg}
+\caption{Dados extraídos}
+\includegraphics{figs/newfigs/describe.jpg}
+\caption{Tratamento dos dados}
+\end{figure}
+\begin{figure}[p]
+\centering
+\includegraphics{figs/newfigs/covariancia.jpg}
+\caption{Covariância}
+\includegraphics{figs/newfigs/autovetoreseautovalores1.jpg}
+\caption{Autovalores e autovetores(1)}
+\end{figure}
+\begin{figure}[p]
+\centering
+\includegraphics{figs/newfigs/autovetoreseautovalores2.jpg}
+\caption{Autovalores e autovetores(2)}
+\label{fig:my_label}
+\end{figure}
 \begin{figure}
     \centering
+    \includegraphics{figs/newfigs/select.jpg}
+    \caption{Seleção dos dois maiores autovalores}
     \includegraphics{figs/graphic.png}
-    \caption{Maiores autovalores}
-    \label{fig:my_label}
+    \caption{Gráfico dos dois maiores autovalores}
 \end{figure}
 \end{document}
